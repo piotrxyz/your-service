@@ -115,15 +115,30 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 100px;
-  height: 20px;
+  height: 35px;
+}
+
+.nav__item img {
+  width: 100%;
 }
 
 .nav__item--search {
-  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav__link {
@@ -135,6 +150,7 @@ body {
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: 400;
+  padding: 5px 5px 5px 5px;
 }
 
 .nav__link:hover {
@@ -219,6 +235,23 @@ body {
   color: #ffffff;
 }
 
+.secondary-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 255px;
+  height: 65px;
+  border-radius: 20px;
+  border-color: transparent;
+  background-color: #c8342d;
+  -webkit-box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
+          box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
+  color: #ffffff;
+}
+
 .slider {
   padding-top: 15%;
   color: #ffffff;
@@ -243,8 +276,139 @@ body {
 }
 
 .about {
-  padding-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10%;
   max-width: 1100px;
+  height: 100vh;
   margin: auto;
+}
+
+.about--left {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about--right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about--right__article__description {
+  opacity: 0.7;
+  color: #2d3f51;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.about__title {
+  color: #2d3f51;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about__title span {
+  font-weight: 400;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin-top: 10%;
+  -webkit-box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
+          box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
+}
+
+.container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: flex-end;
+  margin-right: 100px;
+}
+
+.article {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.article__title {
+  color: #2d3f51;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.article__description {
+  opacity: 0.7;
+  color: #2d3f51;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.article__subtitle {
+  color: #2d3f51;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-top: 15%;
 }
 /*# sourceMappingURL=style.css.map */
