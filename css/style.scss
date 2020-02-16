@@ -449,3 +449,36 @@ main {
     line-height: 30px;
   }
 }
+
+.items {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 1060px;
+  margin-top: 5%;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-top: 10%;
+    width: 150px;
+  }
+
+  &__subtitle {
+    color: #ffffff;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 44%;
+  }
+}
