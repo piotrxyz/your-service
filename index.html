@@ -8,13 +8,12 @@
   <meta name="description" content="Your Service official page. Company that creates websites." />
   <link rel="stylesheet" href="./css/style.css">
   <link href="/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
-
   <title>Your Service</title>
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header id="header" class="header">
       <ul id="socials" class="socials__list">
         <li class="socials__item">
           <a class="socials__link" href="#">
@@ -49,7 +48,7 @@
       <div class="logo">
         logo here
       </div>
-      <nav class="nav">
+      <nav id="nav" class="nav">
         <ul id="nav" class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#home">HOME</a>
@@ -73,7 +72,7 @@
         </ul>
       </nav>
     </header>
-    <>
+    <main id="main" class="main">
       <section class="hero">
         <h1 class="hero__title">your<span> service </span>ready to launch</h1>
         <p class="hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -138,7 +137,7 @@
             <a class="secondary__btn--link" href="#">SEE OUR WORK</a></button>
         </div>
       </section>
-      <section class="showcase">
+      <section id="showcase" class="showcase">
         <div class="showcase__wrapper">
           <h1 class="showcase__title">
             Simple & Best Way To Showcase Your Work
@@ -192,44 +191,110 @@
         <p class="workprocess__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
           laboris nisi ut aliquip ex ea</p>
-
         <div class="items">
           <div class="item">
-            <img class="item__icon" src="img/icon.svg" alt="icon">
             <h1 class="item__title">research</h1>
             <h2 class="item__subtitle">1</h2>
+            <img class="item__icon" src="img/icon.svg" alt="icon">
+            <img class="item__icon--red" src="img/icon-red.svg" alt="icon">
           </div>
           <div class="item">
-            <img class="item__icon" src="img/icon.svg" alt="icon">
             <h1 class="item__title">sketching</h1>
             <h2 class="item__subtitle">2</h2>
+            <img class="item__icon" src="img/icon.svg" alt="icon">
+            <img class="item__icon--red" src="img/icon-red.svg" alt="icon">
           </div>
           <div class="item">
-            <img class="item__icon" src="img/icon.svg" alt="icon">
             <h1 class="item__title">desing approch</h1>
             <h2 class="item__subtitle">3</h2>
+            <img class="item__icon" src="img/icon.svg" alt="icon">
+            <img class="item__icon--red" src="img/icon-red.svg" alt="icon">
           </div>
           <div class="item">
-            <img class="item__icon" src="img/icon.svg" alt="icon">
             <h1 class="item__title">development</h1>
             <h2 class="item__subtitle">4</h2>
+            <img class="item__icon" src="img/icon.svg" alt="icon">
+            <img class="item__icon--red" src="img/icon-red.svg" alt="icon">
           </div>
           <div class="item">
-            <img class="item__icon" src="img/icon.svg" alt="icon">
             <h1 class="item__title">start testing</h1>
             <h2 class="item__subtitle">5</h2>
+            <img class="item__icon" src="img/icon.svg" alt="icon">
+            <img class="item__icon--red" src="img/icon-red.svg" alt="icon">
           </div>
           <div class="item">
-            <img class="item__icon" src="img/icon.svg" alt="icon">
             <h1 class="item__title">product launch</h1>
             <h2 class="item__subtitle">6</h2>
+            <img class="item__icon" src="img/icon.svg" alt="icon">
+            <img class="item__icon--red" src="img/icon-red.svg" alt="icon">
           </div>
         </div>
+      </section>
+      <section id="service" class="service">
+        <h1 class="service__title">Our Amazing Service</h1>
+        <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea</p>
+        <div class="offer">
+          <div class="offer__container">
+            <h1 class="offer__title">graphic design</h1>
+            <img class="offer__border" src="img/offer-border.svg">
+            <img class="offer__icon" src="img/bulb.svg">
+            <p class="offer__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            </p>
+          </div>
+          <div class="offer__container">
+            <h1 class="offer__title">site development</h1>
+            <img class="offer__border" src="img/offer-border.svg">
+            <img class="offer__icon" src="img/screen.svg">
+            <p class="offer__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            </p>
+          </div>
+          <div class="offer__container">
+            <h1 class="offer__title">seo optimization</h1>
+            <img class="offer__border" src="img/offer-border.svg">
+            <img class="offer__icon" src="img/seo.svg">
+            <p class="offer__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            </p>
+          </div>
+          <div class="offer__container">
+            <h1 class="offer__title">mobile development</h1>
+            <img class="offer__border" src="img/offer-border.svg">
+            <img class="offer__icon" src="img/mobile.svg">
+            <p class="offer__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            </p>
+          </div>
+          <div class="offer__container">
+            <h1 class="offer__title">support 24 hours</h1>
+            <img class="offer__border" src="img/offer-border.svg">
+            <img class="offer__icon" src="img/support.svg">
+            <p class="offer__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            </p>
+          </div>
+          <div class="offer__container">
+            <h1 class="offer__title">free hosting</h1>
+            <img class="offer__border" src="img/offer-border.svg">
+            <img class="offer__icon" src="img/hosting.svg">
+            <p class="offer__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="opinion" class="opinion">
+        <h1 class="opinion__title">Client About Us</h1>
+        <!-- continue here -->
+        <!-- continue here -->
+        <!-- continue here -->
       </section>
   </div>
 
   </main>
-
 </body>
 
 </html>
