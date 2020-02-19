@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -78,7 +79,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  text-decoration: none;
   color: white;
 }
 
@@ -144,7 +144,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-decoration: none;
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;
@@ -254,7 +253,6 @@ body {
 }
 
 .primary__btn--link {
-  text-decoration: none;
   color: #ffffff;
 }
 
@@ -277,7 +275,6 @@ body {
 }
 
 .secondary__btn--link {
-  text-decoration: none;
   color: #ffffff;
 }
 
@@ -411,7 +408,6 @@ body {
   text-transform: uppercase;
   padding-top: 15%;
   padding-left: 10%;
-  text-decoration: none;
 }
 
 .article img {
@@ -515,7 +511,6 @@ body {
 
 .showcase .products__link {
   color: #2d3f51;
-  text-decoration: none;
 }
 
 .examples {
@@ -1013,7 +1008,6 @@ body {
   line-height: 30px;
   text-transform: uppercase;
   margin-bottom: 3%;
-  text-decoration: none;
 }
 
 .blog .posts {
@@ -1104,7 +1098,6 @@ body {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
 .footer {
@@ -1150,7 +1143,6 @@ body {
 }
 
 .footer__nav--link {
-  text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -1193,7 +1185,6 @@ body {
 }
 
 .footer__copyrights--link {
-  text-decoration: none;
   color: #ffffff;
   text-align: center;
 }
