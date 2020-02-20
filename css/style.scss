@@ -16,7 +16,7 @@ body {
 }
 
 .wrapper {
-  background-image: url(/img/header-bg.jpg);
+  background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 1600px;
@@ -592,7 +592,7 @@ body {
 .opinion {
   display: flex;
   flex-direction: column;
-  background-image: url(/img/opinion-bg.jpg);
+  background-image: url(../img/opinion-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
