@@ -8,10 +8,10 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
-  scroll-behavior: smooth;
   font-family: $main-font;
 }
 
@@ -22,8 +22,6 @@ body {
   min-width: 1600px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  align-content: flex-start;
   justify-content: center;
 }
 
@@ -52,7 +50,6 @@ body {
     justify-content: flex-start;
     width: 100%;
     height: 50px;
-    display: flex;
   }
 
   &__item {
@@ -94,12 +91,6 @@ body {
     img {
       width: 100%;
     }
-
-    &--search {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
 
   &__link {
@@ -115,6 +106,7 @@ body {
     }
   }
 }
+
 
 .main {
   width: 100%;
@@ -295,14 +287,14 @@ body {
   }
 
   &__link {
-    max-width: 40%;
+    max-width: 30%;
     color: $gray;
     font-size: 14px;
     font-weight: 700;
     line-height: 25px;
     text-transform: uppercase;
-    padding-top: 15%;
-    padding-left: 10%;
+    margin-top: 15%;
+    margin-left: 10%;
   }
 
   img {
@@ -565,10 +557,10 @@ body {
     }
 
     &__icon {
-      // services site development svg - need fix
-      // fill: #c8342d;
+      width: 50px;
+      height: 50px;
       position: absolute;
-      margin-top: 20%;
+      margin-top: 21%;
     }
 
     &__title {
@@ -701,6 +693,7 @@ body {
   }
 
   &__description {
+    text-align: center;
     width: 45%;
     margin-top: 2%;
     opacity: 0.7;
@@ -744,10 +737,12 @@ body {
     }
 
     &__date {
+      max-width: 23%;
       margin-left: 5%;
     }
 
     &__author {
+      max-width: 5%;
       margin-left: 20%;
     }
 
@@ -775,7 +770,7 @@ body {
 
     &__link {
       margin-left: 5%;
-      width: 15%;
+      width: 11%;
       color: $gray;
       font-size: 14px;
       font-weight: 700;
@@ -798,6 +793,7 @@ body {
     }
 
     .post {
+      position: relative;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
       margin-top: 10%;
 
@@ -806,7 +802,7 @@ body {
         position: absolute;
         display: flex;
         flex-direction: row;
-        width: 10%;
+        width: 30%;
         color: $red;
         font-size: 12px;
         font-weight: 700;
@@ -814,13 +810,13 @@ body {
       }
 
       &__date {
-        max-width: 5%;
-        margin-left: 1%;
+        max-width: 23%;
+        margin-left: 5%;
       }
 
       &__author {
-        max-width: 3%;
-        margin-left: 7%;
+        max-width: 12%;
+        margin-left: 35%;
       }
 
       &__title {
