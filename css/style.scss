@@ -179,6 +179,9 @@ body {
   color: $white;
 
   &--link {
+    display: flex;
+    justify-self: center;
+    align-items: center;
     color: $white;
   }
 }
@@ -196,6 +199,9 @@ body {
   margin-bottom: 5%;
 
   &--link {
+    display: flex;
+    justify-self: center;
+    align-items: center;
     color: $white;
   }
 }
