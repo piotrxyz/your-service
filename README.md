@@ -1,7 +1,7 @@
 # your-service
 Website for fictional company which creates websites.
 # Technology stack
-- HTML, CSS
+- HTML5, CSS3
 - CSS preprocessor - SCSS
 - [Flaticon](https://www.flaticon.com/) - svg icons source
 - [fontawesome](https://fontawesome.com/) - other icons source
