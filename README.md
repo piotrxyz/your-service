@@ -3,6 +3,7 @@ Website for fictional company which creates websites.
 # Technology stack
 - HTML5, CSS3
 - CSS preprocessor - SCSS
+- JavaScript
 - [Flaticon](https://www.flaticon.com/) - svg icons source
 - [fontawesome](https://fontawesome.com/) - other icons source
 # Design
