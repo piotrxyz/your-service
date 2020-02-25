@@ -48,6 +48,12 @@ html {
   text-align: center;
 }
 
+@media (max-width: 500px) {
+  .header__logo {
+    font-size: 32px;
+  }
+}
+
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,7 +237,7 @@ html {
   transition: .2s ease-in;
   z-index: 10000;
   position: fixed;
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;
   background-color: rgba(40, 59, 85, 0.931);
 }
@@ -252,7 +258,7 @@ html {
 }
 
 .menu__link {
-  font-size: 50px;
+  font-size: 7rem;
   color: #c8342d;
 }
 
@@ -303,6 +309,12 @@ html {
   text-align: center;
 }
 
+@media (max-width: 500px) {
+  .hero__title {
+    font-size: 5rem;
+  }
+}
+
 .hero__title span {
   color: #c8342d;
 }
@@ -316,6 +328,12 @@ html {
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
+}
+
+@media (max-width: 500px) {
+  .hero__subtitle {
+    font-size: 2rem;
+  }
 }
 
 .hero__slider {
