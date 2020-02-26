@@ -15,7 +15,7 @@ html {
 .wrapper {
   background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 120vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,6 +172,12 @@ html {
   }
 }
 
+@media (max-width: 1600px) {
+  .nav__button {
+    top: 15px;
+  }
+}
+
 .nav__button--active {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -294,7 +300,8 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 15%;
+  padding-top: 15%;
+  height: 100vh;
 }
 
 .hero__title {
@@ -1232,8 +1239,8 @@ html {
 .blog .posts__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 350px 350px 350px;
-      grid-template-columns: 350px 350px 350px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 259px;
       grid-template-rows: 259px;
   -webkit-column-gap: 3%;
