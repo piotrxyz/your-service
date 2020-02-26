@@ -16,21 +16,16 @@ html {
   font-family: $main-font;
   scroll-behavior: smooth;
   text-decoration: none;
-  width: 100%;
 }
 
 .wrapper {
   background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  // min-width: 1600px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  @media (max-width: 375px) {
-    width: 375px;
-  }
+  width: 100%;
 }
 
 .header {
@@ -40,23 +35,18 @@ html {
   height: 50px;
   width: 90%;
 
-  @media (max-width: 375px) {
-    width: 375px;
-  }
-
   &__logo {
+    cursor: pointer;
     position: absolute;
-    left: 43%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 200px;
     color: $white;
     font-size: 21px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
-
-    @media (max-width: 500px) {
-      font-size: 32px;
-    }
   }
 }
 
@@ -97,27 +87,57 @@ html {
   width: 100%;
   height: 50px;
 
+  &__list {
+    @media (min-width: 1600px) {
+      display: flex;
+      list-style: none;
+    }
+
+    display: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    display: flex;
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 5px 5px 5px;
+
+    &:hover {
+      border: 1px solid $white;
+      border-radius: 4px;
+    }
+  }
+
   &__button {
     position: fixed;
     z-index: 10000;
-    top: 45px;
-    right: 120px;
+    top: 35px;
+    right: 20px;
     background-color: transparent;
     border: none;
-    width: 50px;
+    width: 40px;
     height: 25px;
     transition: .2s;
 
-    @media (max-width: 800px) {
+    @media (min-width: 1600px) {
       display: none;
     }
 
     &--active {
       transform: rotate(-90deg);
-    }
-
-    @media (max-width: 500px) {
-      display: none;
     }
 
     span {
@@ -155,37 +175,6 @@ html {
     &--active span:nth-child(3) {
       bottom: calc(50% - 2.5px);
       transform: rotate(-45deg);
-    }
-  }
-
-
-  &__list {
-    display: none;
-    list-style: none;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 35px;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  &__link {
-    display: flex;
-    color: $white;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 5px 5px 5px 5px;
-
-    &:hover {
-      border: 1px solid $white;
-      border-radius: 4px;
     }
   }
 }
@@ -233,10 +222,6 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 375px) {
-    width: 375px;
-  }
 }
 
 .hero {
@@ -248,13 +233,13 @@ html {
 
   &__title {
     color: $white;
-    font-size: 56px;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
 
-    @media (max-width: 500px) {
-      font-size: 5rem;
+    @media (min-width: 1600px) {
+      font-size: 56px;
     }
 
     span {
@@ -271,10 +256,6 @@ html {
     font-size: 14px;
     font-weight: 400;
     line-height: 30px;
-
-    @media (max-width: 500px) {
-      font-size: 2rem;
-    }
   }
 
   &__slider {
@@ -345,8 +326,10 @@ html {
   margin-bottom: 4%;
   max-width: 1100px;
 
-  @media (max-width: 375px) {
-    width: 375px;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &--left {
@@ -394,15 +377,11 @@ html {
 
 .article {
   height: 215px;
-  min-width: 540px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
   margin-top: 5%;
-
-  @media (max-width: 375px) {
-    width: 375px;
-  }
 
   &__group {
     display: flex;
@@ -432,7 +411,7 @@ html {
   }
 
   &__link {
-    max-width: 30%;
+    max-width: 34%;
     color: $gray;
     font-size: 14px;
     font-weight: 700;
@@ -456,11 +435,6 @@ html {
   background-color: #f5f5f5;
   width: 100%;
 
-  @media (max-width: 375px) {
-    width: 375px;
-  }
-
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -471,7 +445,8 @@ html {
   &__title {
     text-align: center;
     color: $gray;
-    font-size: 36px;
+    // font-size: 36px;
+    font-size: 26px;
     font-weight: 700;
     padding-top: 5%;
   }
@@ -501,10 +476,6 @@ html {
       font-weight: 700;
       text-transform: uppercase;
       list-style: none;
-
-      @media (max-width: 375px) {
-        width: 375px;
-      }
     }
 
     &__item {
@@ -528,6 +499,40 @@ html {
 }
 
 .examples {
+  @media (max-width: 1101px) {
+    &__top {
+      &--img {
+        width: 350px;
+        height: 335px;
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    &__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &--img {
+        width: 300px;
+        height: 335px;
+      }
+    }
+
+    &__bottom {
+      &--img {
+        width: 300px;
+      }
+    }
+
+    &__right {
+      &--img {
+        width: 300px;
+      }
+    }
+  }
+
   @media (min-width: 1300px) {
     width: 1100px;
     display: flex;
@@ -573,7 +578,6 @@ html {
   text-align: center;
   width: 100%;
   padding-bottom: 2%;
-  // height: 496px;
   background-color: $gray;
 
   &__title {
@@ -600,8 +604,12 @@ html {
   display: flex;
   margin: auto;
   justify-content: space-between;
-  width: 1060px;
   margin-top: 5%;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .item {
@@ -609,6 +617,7 @@ html {
   display: flex;
   flex-direction: column;
   color: $white;
+  font-size: 16px;
 
   &:hover {
     color: $red;
@@ -664,7 +673,7 @@ html {
   align-items: center;
 
   &__title {
-    margin: auto;
+    text-align: center;
     margin-top: 4%;
     color: $gray;
     font-size: 36px;
@@ -691,15 +700,11 @@ html {
     row-gap: 4%;
     justify-items: center;
 
-    @media (max-width: 800px) {
-      display: flex;
-      flex-direction: column;
-      height: 800px;
-
-      &__container {
-        width: 80px;
-        height: 80px;
-      }
+    @media (max-width: 1200px) {
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-rows: 315px 315px 315px 315px 315px 315px;
+      row-gap: .5%;
     }
 
     &__container {
@@ -764,8 +769,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  // min-width: 1600px;
-  // height: 719px;
   margin-top: 10%;
 
   &__title {
@@ -847,15 +850,10 @@ html {
 .blog {
   background-color: $blog-bg;
   width: 100%;
-  // min-width: 1600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 5%;
-
-  @media (max-width: 375px) {
-    width: 375px;
-  }
 
   &__title {
     margin-top: 2%;
@@ -876,13 +874,12 @@ html {
   }
 
   .container {
-    width: 1110px;
+    @media (min-width: 1200px) {
+      width: 1110px;
+    }
+
     margin-top: 4%;
     display: flex;
-
-    @media (max-width: 375px) {
-      width: 375px;
-    }
 
     &--left {
       width: 32%;
@@ -897,7 +894,7 @@ html {
       position: relative;
       display: flex;
       flex-direction: column;
-      width: 78%;
+      width: 68%;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 
       span {
@@ -957,7 +954,10 @@ html {
   }
 
   .posts {
-    width: 1110px;
+    @media (min-width: 1200px) {
+      width: 1110px;
+    }
+
     display: flex;
     flex-direction: row;
 
@@ -966,6 +966,11 @@ html {
       grid-template-columns: 350px 350px 350px;
       grid-template-rows: 259px;
       column-gap: 3%;
+
+      @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     .post {
@@ -1038,7 +1043,6 @@ html {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  // min-width: 1600px;
   background-color: $footer-bg;
 
   &__nav {
