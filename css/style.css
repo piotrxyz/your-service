@@ -1603,6 +1603,12 @@ html {
   text-transform: uppercase;
 }
 
+@media (max-width: 800px) {
+  .blog .posts .post__link {
+    min-width: 60%;
+  }
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;

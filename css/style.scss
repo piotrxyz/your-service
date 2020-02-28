@@ -1219,6 +1219,10 @@ html {
         font-weight: 700;
         line-height: 30px;
         text-transform: uppercase;
+
+        @media (max-width: 800px) {
+          min-width: 60%;
+        }
       }
     }
   }
