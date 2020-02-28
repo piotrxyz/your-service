@@ -959,11 +959,15 @@ html {
 
       &--one {
         opacity: 1;
+        width: 20px;
+        height: 20px;
       }
 
       &--two,
       &--three {
         opacity: 0.5;
+        width: 20px;
+        height: 20px;
       }
     }
 
@@ -1002,6 +1006,7 @@ html {
       padding-top: 5%;
       padding-bottom: 5%;
       width: 90%;
+      font-size: 14px;
     }
   }
 
