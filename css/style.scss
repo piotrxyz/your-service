@@ -260,6 +260,25 @@ html {
     font-size: 14px;
     font-weight: 400;
     line-height: 30px;
+    // transform: translateX(-180%);
+    // transition: all 1s ease-in-out;
+    // animation: fadein 2s;
+
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    &--show {
+      // transform: translateX(0%);
+      animation: fadein 4s;
+    }
 
     @media (min-width: 1600px) {
       max-width: 70%;
@@ -272,33 +291,37 @@ html {
   }
 
   &__slider {
-    padding-top: 30%;
-    color: $white;
+    width: 100px;
+    height: 100px;
+    margin-top: 20%;
     display: flex;
     justify-content: center;
 
     @media (min-width: 1600px) {
-      padding-top: 15%;
+      margin-top: 15%;
     }
 
     @media (max-width: 800px) {
-      padding-top: 2%;
+      margin-top: 2%;
     }
 
     @media (max-width: 400px) {
-      padding-top: 20%;
+      margin-top: 20%;
     }
 
-    &--one {
+    span {
+      display: inline-block;
       width: 20px;
       height: 20px;
-    }
+      opacity: .5;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: $white;
+      margin: 0 3px;
 
-    &--two,
-    &--three {
-      opacity: 0.5;
-      width: 20px;
-      height: 20px;
+      &.active {
+        opacity: 1;
+      }
     }
   }
 }

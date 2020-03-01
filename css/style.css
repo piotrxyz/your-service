@@ -337,6 +337,29 @@ html {
   line-height: 30px;
 }
 
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero__subtitle--show {
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
+}
+
 @media (min-width: 1600px) {
   .hero__subtitle {
     max-width: 70%;
@@ -351,8 +374,9 @@ html {
 }
 
 .hero__slider {
-  padding-top: 30%;
-  color: #ffffff;
+  width: 100px;
+  height: 100px;
+  margin-top: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,31 +387,35 @@ html {
 
 @media (min-width: 1600px) {
   .hero__slider {
-    padding-top: 15%;
+    margin-top: 15%;
   }
 }
 
 @media (max-width: 800px) {
   .hero__slider {
-    padding-top: 2%;
+    margin-top: 2%;
   }
 }
 
 @media (max-width: 400px) {
   .hero__slider {
-    padding-top: 20%;
+    margin-top: 20%;
   }
 }
 
-.hero__slider--one {
+.hero__slider span {
+  display: inline-block;
   width: 20px;
   height: 20px;
+  opacity: .5;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 0 3px;
 }
 
-.hero__slider--two, .hero__slider--three {
-  opacity: 0.5;
-  width: 20px;
-  height: 20px;
+.hero__slider span.active {
+  opacity: 1;
 }
 
 .primary__btn {
