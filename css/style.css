@@ -10,6 +10,7 @@ html {
   font-family: "Open Sans";
   scroll-behavior: smooth;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -153,9 +154,88 @@ html {
   border-radius: 4px;
 }
 
-.nav__button {
+.menu {
   position: fixed;
-  z-index: 10000;
+  z-index: 999;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
+  background-color: rgba(45, 60, 75, 0.931);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu__list {
+  padding-top: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.menu__item {
+  padding-top: 1%;
+}
+
+.menu__link {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.menu__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10%;
+}
+
+.menu__contact--mail {
+  background-image: url(../img/mail.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.menu__contact--phone {
+  background-image: url(../img/phone.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.menu--show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-button {
+  position: fixed;
+  z-index: 1000;
   top: 35px;
   right: 20px;
   background-color: transparent;
@@ -167,23 +247,23 @@ html {
 }
 
 @media (min-width: 1600px) {
-  .nav__button {
+  .menu-button {
     display: none;
   }
 }
 
 @media (max-width: 1600px) {
-  .nav__button {
+  .menu-button {
     top: 15px;
   }
 }
 
-.nav__button--active {
+.menu-button--active {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-.nav__button span {
+.menu-button span {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -196,76 +276,32 @@ html {
   transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s, -webkit-transform .2s .4s;
 }
 
-.nav__button span:nth-child(1) {
+.menu-button span:nth-child(1) {
   top: 0;
 }
 
-.nav__button span:nth-child(2) {
+.menu-button span:nth-child(2) {
   top: calc(50% - 2.5px);
 }
 
-.nav__button span:nth-child(3) {
+.menu-button span:nth-child(3) {
   bottom: 0;
 }
 
-.nav__button--active span:nth-child(1) {
+.menu-button--active span:nth-child(1) {
   top: calc(50% - 2.5px);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.nav__button--active span:nth-child(2) {
+.menu-button--active span:nth-child(2) {
   opacity: 0;
 }
 
-.nav__button--active span:nth-child(3) {
+.menu-button--active span:nth-child(3) {
   bottom: calc(50% - 2.5px);
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-}
-
-.menu {
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  z-index: 10000;
-  position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  background-color: rgba(40, 59, 85, 0.931);
-}
-
-.menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  list-style: none;
-}
-
-.menu__item {
-  margin-top: 10%;
-}
-
-.menu__link {
-  font-size: 7rem;
-  color: #c8342d;
-}
-
-.show-menu {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
 }
 
 .main {

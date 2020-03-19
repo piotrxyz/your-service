@@ -16,6 +16,7 @@ html {
   font-family: $main-font;
   scroll-behavior: smooth;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -119,100 +120,122 @@ html {
       border-radius: 4px;
     }
   }
-
-  &__button {
-    position: fixed;
-    z-index: 10000;
-    top: 35px;
-    right: 20px;
-    background-color: transparent;
-    border: none;
-    width: 40px;
-    height: 25px;
-    transition: .2s;
-
-    @media (min-width: 1600px) {
-      display: none;
-    }
-
-    @media (max-width: 1600px) {
-      top: 15px;
-    }
-
-    &--active {
-      transform: rotate(-90deg);
-    }
-
-    span {
-      position: absolute;
-      width: 100%;
-      height: 5px;
-      background-color: $white;
-      border: 1px solid black;
-      left: 0;
-      transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
-
-      &:nth-child(1) {
-        top: 0;
-      }
-
-      &:nth-child(2) {
-        top: calc(50% - 2.5px);
-      }
-
-      &:nth-child(3) {
-        bottom: 0;
-      }
-    }
-
-    &--active span:nth-child(1) {
-      top: calc(50% - 2.5px);
-      transform: rotate(45deg);
-    }
-
-    &--active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    &--active span:nth-child(3) {
-      bottom: calc(50% - 2.5px);
-      transform: rotate(-45deg);
-    }
-  }
 }
 
 .menu {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(100%);
-  transition: .2s ease-in;
-  z-index: 10000;
   position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  background-color: rgba(40, 59, 85, 0.931);
+  z-index: 999;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform .2s linear;
+  background-color: rgba(45, 60, 75, 0.931);
+  display: flex;
+  flex-direction: column;
 
   &__list {
+    padding-top: 20%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     list-style: none;
   }
 
   &__item {
-    margin-top: 10%;
+    padding-top: 1%;
   }
 
   &__link {
-    font-size: 7rem;
-    color: $red;
+    font-size: 1rem;
+    color: $white;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10%;
+
+    &--mail {
+      background-image: url(../img/mail.svg);
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+    }
+
+    &--phone {
+      background-image: url(../img/phone.svg);
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--show {
+    transform: translateX(0);
   }
 }
 
-.show-menu {
-  transform: translateX(0%);
-}
+.menu-button {
+  position: fixed;
+  z-index: 1000;
+  top: 35px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 25px;
+  transition: .2s;
 
+  @media (min-width: 1600px) {
+    display: none;
+  }
+
+  @media (max-width: 1600px) {
+    top: 15px;
+  }
+
+  &--active {
+    transform: rotate(-90deg);
+  }
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: $white;
+    border: 1px solid black;
+    left: 0;
+    transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: calc(50% - 2.5px);
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+
+  &--active span:nth-child(1) {
+    top: calc(50% - 2.5px);
+    transform: rotate(45deg);
+  }
+
+  &--active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &--active span:nth-child(3) {
+    bottom: calc(50% - 2.5px);
+    transform: rotate(-45deg);
+  }
+}
 
 .main {
   width: 100%;

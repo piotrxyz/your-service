@@ -13,7 +13,12 @@
 
 <body>
   <div id="wrapper" class="wrapper">
-    <div class="menu">
+    <button id="menu-button" class="menu-button" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div id="menu" class="menu">
       <ul class="menu__list">
         <li class="menu__item">
           <a class="menu__link" href="#wrapper">HOME</a>
@@ -31,6 +36,10 @@
           <a class="menu__link" href="#">CONTACT</a>
         </li>
       </ul>
+      <div class="menu__contact">
+        <a class="menu__contact menu__contact--mail" href="#"></a>
+        <a class="menu__contact menu__contact--phone" href="#"></a>
+      </div>
     </div>
     <header id="header" class="header">
       <h1 class="header__logo">logo here</h1>
@@ -83,11 +92,6 @@
           </li>
         </ul>
       </nav>
-      <button id="nav__button" class="nav__button" type="button">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </header>
     <main id="main" class="main">
       <section id="hero" class="hero">
