@@ -240,8 +240,8 @@ html {
   right: 20px;
   background-color: transparent;
   border: none;
-  width: 40px;
-  height: 25px;
+  width: 35px;
+  height: 20px;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -268,7 +268,8 @@ html {
   width: 100%;
   height: 5px;
   background-color: #ffffff;
-  border: 1px solid black;
+  border: 1px solid #3f3d3d;
+  border-radius: 2px;
   left: 0;
   -webkit-transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, -webkit-transform .2s .4s;
   transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, -webkit-transform .2s .4s;

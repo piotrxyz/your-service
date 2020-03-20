@@ -184,8 +184,8 @@ html {
   right: 20px;
   background-color: transparent;
   border: none;
-  width: 40px;
-  height: 25px;
+  width: 35px;
+  height: 20px;
   transition: .2s;
 
   @media (min-width: 1600px) {
@@ -205,7 +205,8 @@ html {
     width: 100%;
     height: 5px;
     background-color: $white;
-    border: 1px solid black;
+    border: 1px solid rgb(63, 61, 61);
+    border-radius: 2px;
     left: 0;
     transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
 
