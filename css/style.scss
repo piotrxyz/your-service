@@ -251,7 +251,7 @@ html {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 
   &__title {
     color: $white;
@@ -416,7 +416,7 @@ html {
     flex-direction: column;
 
     @media (max-width: 1200px) {
-      width: 90%;
+      width: 75%;
     }
   }
 
