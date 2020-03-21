@@ -37,40 +37,40 @@
         </li>
       </ul>
       <div class="menu__contact">
-        <a class="menu__contact menu__contact--mail" href="#"></a>
-        <a class="menu__contact menu__contact--phone" href="#"></a>
+        <a class="menu__contact--phone" href="#"></a>
+        <a class="menu__contact--mail" href="#"></a>
       </div>
     </div>
     <header id="header" class="header">
       <h1 class="header__logo">logo here</h1>
-      <ul id="socials" class="socials__list">
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <i class="fab fa-google-plus-g"></i>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <i class="fab fa-dribbble"></i>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-      </ul>
       <nav id="nav" class="nav">
+        <ul id="socials" class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <i class="fab fa-google-plus-g"></i>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <i class="fab fa-dribbble"></i>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
         <ul id="nav__list" class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#wrapper">HOME</a>
@@ -141,6 +141,7 @@
               <a class="article__link" href="#">read more</a>
             </div>
             <img src="img/tablet.jpg" alt="testing" loading="lazy" class="article__image">
+          </article>
         </div>
         <div class="about--right">
           <h1 class="about__title">A user-friendly Themes, build with usability in mind great <span>modern
@@ -189,27 +190,17 @@
             </li>
           </ul>
           <div class="examples">
-            <div class="examples__left">
-              <div class="examples__top">
-                <img src="img/cup.jpg" alt="cup project" loading="lazy" class="examples__top--img">
-                <div class="examples__bottom">
-                  <div class="examples__bottom--square">
-                    <img src="img/hat.jpg" alt="hat project" loading="lazy" class="examples__bottom--img">
-                  </div>
-                  <div class="examples__bottom--square">
-                    <img src="img/cards.jpg" alt="cards project" loading="lazy" class="examples__bottom--img">
-                  </div>
-                </div>
-              </div>
-              <div class="examples__right">
-                <img src="img/juice.jpg" alt="plastic glass project" loading="lazy" class="examples__right--img">
-              </div>
-            </div>
+            <picture>
+              <source media="(min-width: 800px)" srcset="img/cup.jpg">
+              <img src="img/cup-small.jpg" alt="cup project" loading="lazy" class="examples__cup">
+            </picture>
+            <img src="img/hat.jpg" alt="hat project" loading="lazy" class="examples__hat">
+            <img src="img/cards.jpg" alt="cards project" loading="lazy" class="examples__cards">
+            <img src="img/juice.jpg" alt="plastic glass project" loading="lazy" class="examples__juice">
           </div>
           <button class="secondary__btn">
             <a class="secondary__btn--link" href="#">SEE OUR WORK</a>
           </button>
-        </div>
       </section>
       <section id="workprocess" class="workprocess">
         <h1 class="workprocess__title">Example Of Work Process</h1>
@@ -399,63 +390,62 @@
           </div>
         </div>
       </section>
-      <footer id="footer" class="footer">
-        <ul id="footer__nav" class="footer__nav">
-          <li class="footer__nav--item">
-            <a class="footer__nav--link" href="#wrapper">home</a>
-          </li>
-          <li class="footer__nav--item">
-            <a class="footer__nav--link" href="#about">pages</a>
-          </li>
-          <li class="footer__nav--item">
-            <a class="footer__nav--link" href="#showcase">portfolio</a>
-          </li>
-          <li class="footer__nav--item">
-            <a class="footer__nav--link" href="#blog">blog</a>
-          </li>
-          <li class="footer__nav--item">
-            <a class="footer__nav--link" href="#">contact</a>
-          </li>
-          <li class="footer__nav--item">
-            <a class="footer__nav--link" href="#"><img src="img/lens.svg" alt="search" /></a>
-          </li>
-        </ul>
-        <ul id="footer__socials" class="footer__socials">
-          <li class="footer__socials--item">
-            <a class="footer__socials--link" href="#">
-              <i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li class="footer__socials--item">
-            <a class="footer__socials--link" href="#">
-              <i class="fab fa-behance"></i></a>
-          </li>
-          <li class="footer__socials--item">
-            <a class="footer__socials--link" href="#">
-              <i class="fab fa-twitter"></i></a>
-          </li>
-          <li class="footer__socials--item">
-            <a class="footer__socials--link" href="#">
-              <i class="fab fa-instagram"></i></a>
-          </li>
-          <li class="footer__socials--item">
-            <a class="footer__socials--link" href="#">
-              <i class="fab fa-pinterest"></i></a>
-          </li>
-          <li class="footer__socials--item">
-            <a class="footer__socials--link" href="#">
-              <i class="fab fa-dribbble"></i></a>
-          </li>
-        </ul>
-        <span class="footer__copyrights">Copyrights
-          <a class="footer__copyrights--link" href="#">free-psd-template.com</a>
-        </span>
-      </footer>
-  </div>
-
-  </main>
-  <script src="./scripts/hamburger.js"></script>
-  <script src="./scripts/hero_slider.js"></script>
-  <script src="./scripts/client_slider.js"></script>
+    </main>
+    <footer id="footer" class="footer">
+      <ul id="footer__nav" class="footer__nav">
+        <li class="footer__nav--item">
+          <a class="footer__nav--link" href="#wrapper">home</a>
+        </li>
+        <li class="footer__nav--item">
+          <a class="footer__nav--link" href="#about">pages</a>
+        </li>
+        <li class="footer__nav--item">
+          <a class="footer__nav--link" href="#showcase">portfolio</a>
+        </li>
+        <li class="footer__nav--item">
+          <a class="footer__nav--link" href="#blog">blog</a>
+        </li>
+        <li class="footer__nav--item">
+          <a class="footer__nav--link" href="#">contact</a>
+        </li>
+        <li class="footer__nav--item">
+          <a class="footer__nav--link" href="#"><img src="img/lens.svg" alt="search" /></a>
+        </li>
+      </ul>
+      <ul id="footer__socials" class="footer__socials">
+        <li class="footer__socials--item">
+          <a class="footer__socials--link" href="#">
+            <i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="footer__socials--item">
+          <a class="footer__socials--link" href="#">
+            <i class="fab fa-behance"></i></a>
+        </li>
+        <li class="footer__socials--item">
+          <a class="footer__socials--link" href="#">
+            <i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="footer__socials--item">
+          <a class="footer__socials--link" href="#">
+            <i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="footer__socials--item">
+          <a class="footer__socials--link" href="#">
+            <i class="fab fa-pinterest"></i></a>
+        </li>
+        <li class="footer__socials--item">
+          <a class="footer__socials--link" href="#">
+            <i class="fab fa-dribbble"></i></a>
+        </li>
+      </ul>
+      <span class="footer__copyrights">Copyrights
+        <a class="footer__copyrights--link" href="#">free-psd-template.com</a>
+      </span>
+    </footer>
+    <!-- </div> -->
+    <script src="./scripts/hamburger.js"></script>
+    <script src="./scripts/hero_slider.js"></script>
+    <script src="./scripts/client_slider.js"></script>
 </body>
 
 </html>

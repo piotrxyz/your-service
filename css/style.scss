@@ -5,6 +5,13 @@ $blog-bg: #f5f5f5;
 $footer-bg: #28252a;
 $main-font: "Open Sans";
 
+$XS-res: 350px;
+$S-res: 500px;
+$M-res: 800px;
+$L-res: 1000px;
+$XL-res: 1300px;
+$XXL-res: 1600px;
+
 * {
   margin: 0;
   padding: 0;
@@ -20,13 +27,21 @@ html {
 }
 
 .wrapper {
-  background-image: url(../img/header-bg.jpg);
+  background-image: url(../img/hero-bg.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 110vh;
+  background-size: 100% 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+
+  @media (max-width: $M-res) {
+    background-image: url(../img/hero-bg-medium.jpg);
+
+    @media (max-width: $S-res) {
+      background-image: url(../img/hero-bg-small.jpg);
+    }
+  }
 }
 
 .header {
@@ -51,41 +66,11 @@ html {
   }
 }
 
-.socials {
-  display: flex;
-
-  &__list {
-    display: flex;
-    justify-content: flex-start;
-
-    @media (max-width: 500px) {
-      display: none;
-    }
-  }
-
-  &__item {
-    width: 40px;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
-    color: white;
-  }
-
-  &__link {
-    color: $white;
-
-    &:hover {
-      color: $red;
-    }
-  }
-}
-
 .nav {
   display: flex;
-  align-self: flex-end;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 50px;
 
   &__list {
     display: none;
@@ -120,6 +105,33 @@ html {
       border-radius: 4px;
     }
   }
+
+  .socials {
+    &__list {
+      display: flex;
+      justify-content: flex-start;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+
+    &__item {
+      width: 40px;
+      height: 20px;
+      display: flex;
+      flex-direction: row;
+      color: white;
+    }
+
+    &__link {
+      color: $white;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
 }
 
 .menu {
@@ -135,7 +147,10 @@ html {
   flex-direction: column;
 
   &__list {
-    padding-top: 20%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,7 +158,7 @@ html {
   }
 
   &__item {
-    padding-top: 1%;
+    padding-top: 35%;
   }
 
   &__link {
@@ -155,20 +170,28 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 10%;
+    align-items: center;
+    width: 100px;
+    height: 150px;
+    position: relative;
+    top: 130px;
+    margin: auto;
 
-    &--mail {
-      background-image: url(../img/mail.svg);
-      background-repeat: no-repeat;
-      width: 20px;
-      height: 20px;
-    }
 
     &--phone {
       background-image: url(../img/phone.svg);
       background-repeat: no-repeat;
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &--mail {
+      background-image: url(../img/mail.svg);
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      margin-top: 40%;
+      position: absolute;
     }
   }
 
@@ -180,7 +203,7 @@ html {
 .menu-button {
   position: fixed;
   z-index: 1000;
-  top: 35px;
+  top: 20px;
   right: 20px;
   background-color: transparent;
   border: none;
@@ -190,10 +213,6 @@ html {
 
   @media (min-width: 1600px) {
     display: none;
-  }
-
-  @media (max-width: 1600px) {
-    top: 15px;
   }
 
   &--active {
@@ -251,7 +270,8 @@ html {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  height: 90vh;
 
   &__title {
     color: $white;
@@ -259,16 +279,13 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 15%;
 
-    @media (min-width: 1600px) {
+    @media (min-width: 1200px) {
       font-size: 56px;
-      padding-top: 15%;
     }
 
-    @media (max-width: 800px) {
-      padding-top: 5%;
-      width: 40%;
+    @media (min-width: $M-res) {
+      width: 70%;
     }
 
     span {
@@ -345,18 +362,13 @@ html {
   background: transparent;
   color: $white;
 
-  @media (min-width: 1600px) {
+  @media (min-width: $XXL-res) {
     margin-top: 15%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: $M-res) {
     margin-top: 0%;
   }
-
-  @media (max-width: 400px) {
-    margin-top: 15%;
-  }
-
 
   &--link {
     display: flex;
@@ -378,7 +390,7 @@ html {
   margin-top: 10%;
   margin-bottom: 5%;
 
-  @media (max-width: 800px) {
+  @media (max-width: $L-res) {
     margin: 5% auto;
   }
 
@@ -391,74 +403,33 @@ html {
 }
 
 .about {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  padding-top: 5%;
-  margin-bottom: 4%;
-  max-width: 1100px;
-
-  @media (max-width: 1200px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  @media (max-width: $S-res) {
+    padding: 5% 5%;
   }
 
-  @media (max-width: 500px) {
-    padding-top: 25%;
-  }
-
-  &--left {
-    width: 50%;
-    height: 100%;
+  @media (min-width: $L-res) {
+    padding-top: 2%;
+    max-width: 1100px;
     display: flex;
-    flex-direction: column;
-
-    @media (max-width: 1200px) {
-      width: 75%;
-    }
+    flex-direction: row;
   }
 
   &--right {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 15%;
-    margin-left: 10%;
+    padding: 5% 10%;
 
-    @media (max-width: 1200px) {
-      width: 90%;
-    }
-
-    @media (max-width: 800px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin-top: 0;
-      margin-left: 0;
-      padding-top: 5%;
+    @media (min-width: $L-res) {
+      padding-left: 10%;
+      padding-top: 15%;
     }
   }
 
   &__title {
-    min-width: 100%;
     color: $gray;
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-
-    @media (max-width: 400px) {
-      padding-top: 10%;
-    }
-
-
 
     span {
       font-weight: 400;
@@ -466,7 +437,6 @@ html {
   }
 
   &__description {
-    max-width: 90%;
     opacity: 0.7;
     color: $gray;
     font-size: 14px;
@@ -477,21 +447,25 @@ html {
 }
 
 .article {
-  height: 215px;
-  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
-  margin-top: 5%;
+  min-width: 254px;
+  max-width: 254px;
+  margin: 5% auto;
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+    min-width: 254px;
+    max-width: 500px;
+  }
 
   &__group {
-    display: flex;
-    flex-direction: column;
-    max-width: 60%;
+    width: 254px;
+    height: 214px;
   }
 
   &__title {
-    max-width: 80%;
     color: $gray;
     font-size: 14px;
     font-weight: 700;
@@ -499,12 +473,6 @@ html {
     text-transform: uppercase;
     padding-left: 10%;
     padding-top: 7%;
-
-    @media (max-width: 500px) {
-      max-width: 90%;
-      font-size: 12px;
-      padding-top: 0%;
-    }
   }
 
   &__description {
@@ -515,34 +483,18 @@ html {
     font-weight: 400;
     line-height: 30px;
     padding-left: 10%;
+    padding-top: 5%;
   }
 
   &__link {
-    max-width: 36%;
+    display: block;
     color: $gray;
     font-size: 14px;
     font-weight: 700;
     line-height: 25px;
     text-transform: uppercase;
-    margin-top: 15%;
-    margin-left: 10%;
-
-    @media (max-width: 500px) {
-      max-width: 51%;
-      font-size: 12px;
-      margin-top: 25%;
-    }
-  }
-
-  &__image {
-    display: flex;
-    align-self: flex-end;
-    width: 52%;
-
-    @media (max-width: 1200px) {
-      max-width: 50%;
-      height: 99%;
-    }
+    padding-top: 8%;
+    padding-left: 10%;
   }
 }
 
@@ -553,7 +505,7 @@ html {
   background-color: #f5f5f5;
   width: 100%;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $XL-res) {
     padding: 10% 0% 10% 0%;
   }
 
@@ -565,7 +517,6 @@ html {
   }
 
   &__title {
-    text-align: center;
     color: $gray;
     font-size: 26px;
     font-weight: 700;
@@ -573,10 +524,7 @@ html {
   }
 
   &__description {
-    display: flex;
     width: 55%;
-    margin: auto;
-    text-align: center;
     opacity: 0.7;
     color: $gray;
     font-size: 14px;
@@ -584,7 +532,7 @@ html {
     line-height: 30px;
     margin-top: 2%;
 
-    @media (max-width: 1200px) {
+    @media (max-width: $XL-res) {
       width: 90%;
     }
   }
@@ -602,7 +550,7 @@ html {
       text-transform: uppercase;
       list-style: none;
 
-      @media (min-width: 800px) {
+      @media (min-width: $L-res) {
         font-size: 14px;
         width: 40%;
       }
@@ -629,77 +577,11 @@ html {
 }
 
 .examples {
-  @media (max-width: 1101px) {
-    &__top {
-      &--img {
-        width: 350px;
-        height: 335px;
-      }
-    }
-  }
-
-  @media (max-width: 350px) {
-    &__top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &--img {
-        width: 300px;
-        height: 335px;
-      }
-    }
-
-    &__bottom {
-      &--img {
-        width: 300px;
-      }
-    }
-
-    &__right {
-      &--img {
-        width: 300px;
-      }
-    }
-  }
-
-  @media (min-width: 1300px) {
-    width: 1100px;
-    display: flex;
-    flex-direction: row;
-
-    &__left {
-      width: 730px;
-      height: 700px;
-    }
-
-    &__top {
-      width: 730px;
-      height: 335px;
-    }
-
-    &__bottom {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 2%;
-      width: 730px;
-      height: 335px;
-
-      &--square {
-        width: 350px;
-        height: 335px;
-      }
-    }
-
-    &__right {
-      display: flex;
-      padding-left: 2%;
-      margin-left: 730px;
-      margin-top: -335px;
-      width: 350px;
-      height: 689px;
-    }
-  }
+  // fix
+  padding: 5% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .workprocess {
