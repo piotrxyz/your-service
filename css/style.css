@@ -688,6 +688,7 @@ html {
   font-size: 26px;
   font-weight: 700;
   padding-top: 5%;
+  max-width: 90%;
 }
 
 .showcase__description {
@@ -753,17 +754,64 @@ html {
 }
 
 .examples {
-  padding: 5% 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  max-width: 80%;
+}
+
+@media (min-width: 1300px) {
+  .examples {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 340px;
+        grid-template-rows: 340px;
+    max-width: 1100px;
+  }
+  .examples__cup {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .examples__hat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: flex-end;
+    padding-top: 14px;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .examples__cards {
+    padding-top: 14px;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .examples__juice {
+    padding-left: 20px;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
+.examples img {
+  max-width: 90%;
+}
+
+@media (min-width: 1000px) {
+  .examples img {
+    max-width: 100%;
+  }
 }
 
 .workprocess {
