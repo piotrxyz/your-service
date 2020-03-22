@@ -203,7 +203,7 @@ html {
 }
 
 .menu__item {
-  padding-top: 35%;
+  padding-top: 15%;
 }
 
 .menu__link {
@@ -226,9 +226,8 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 100px;
-  height: 150px;
   position: relative;
-  top: 130px;
+  top: 90px;
   margin: auto;
 }
 
