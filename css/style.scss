@@ -27,7 +27,7 @@ html {
 }
 
 .wrapper {
-  background-image: url(../img/hero-bg.jpg);
+  background-image: url(../img/hero-bg-large.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100vh;
   display: flex;
@@ -73,6 +73,7 @@ html {
   width: 100%;
 
   &__list {
+    cursor: pointer;
     display: none;
 
     @media (min-width: 1600px) {
@@ -211,7 +212,7 @@ html {
   height: 20px;
   transition: .2s;
 
-  @media (min-width: 1600px) {
+  @media (min-width: $XXL-res) {
     display: none;
   }
 
@@ -271,7 +272,7 @@ html {
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  min-height: 90vh;
 
   &__title {
     color: $white;
@@ -350,7 +351,7 @@ html {
   }
 }
 
-.primary__btn {
+.button {
   display: flex;
   align-self: center;
   justify-content: center;
@@ -370,35 +371,24 @@ html {
     margin-top: 0%;
   }
 
-  &--link {
+  &-link {
     display: flex;
     justify-self: center;
     align-items: center;
     color: $white;
   }
-}
 
-.secondary__btn {
-  display: flex;
-  justify-content: center;
-  width: 255px;
-  height: 65px;
-  border-radius: 20px;
-  border-color: transparent;
-  background-color: $red;
-  box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
-  margin-top: 10%;
-  margin-bottom: 5%;
+  &--red {
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: $red;
+    box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
+    margin-top: 10%;
+    margin-bottom: 5%;
 
-  @media (max-width: $L-res) {
-    margin: 5% auto;
-  }
-
-  &--link {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    color: $white;
+    @media (max-width: $L-res) {
+      margin: 5% auto;
+    }
   }
 }
 
@@ -579,10 +569,12 @@ html {
 
 .examples {
   display: grid;
+  justify-items: center;
   max-width: 80%;
 
   @media (min-width: $XL-res) {
     display: grid;
+    justify-items: flex-start;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 340px;
     max-width: 1100px;
@@ -620,6 +612,10 @@ html {
     @media (min-width: $L-res) {
       max-width: 100%;
     }
+
+    @media (max-width: $XL-res) {
+      padding-top: 10%;
+    }
   }
 }
 
@@ -628,6 +624,7 @@ html {
   flex-direction: column;
   text-align: center;
   width: 100%;
+  height: 50%;
   padding-bottom: 2%;
   background-color: $gray;
 
@@ -657,21 +654,37 @@ html {
 }
 
 .items {
-  display: flex;
-  margin: auto;
-  justify-content: space-between;
-  margin-top: 5%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: repeat(6, 200px);
+  align-self: center;
 
-  @media (max-width: 1200px) {
+  @media (min-width: $S-res) {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 200px);
+  }
+
+  @media (min-width: $M-res) {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+  }
+
+  @media (min-width: $XL-res) {
+    max-width: 1100px;
     display: flex;
-    flex-direction: column;
+    align-self: center;
   }
 }
 
 .item {
+  width: 200px;
+  height: 200px;
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: $white;
   font-size: 16px;
 
@@ -703,32 +716,21 @@ html {
   }
 
   &__title {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    bottom: 0;
     text-transform: uppercase;
     color: $white;
     font-size: 14px;
     font-weight: 700;
     line-height: 30px;
-    margin-top: 80%;
-    width: 150px;
-
-    @media (max-width: 500px) {
-      margin-top: 70%;
-      padding: 0 0 30% 0;
-    }
   }
 
-  &__subtitle {
+  &__number {
     z-index: 100;
-    position: absolute;
-    margin-top: 20%;
-    margin-left: 44%;
   }
 }
 
 .service {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -744,37 +746,40 @@ html {
   &__description {
     text-align: center;
     margin-top: 2%;
-    width: 45%;
+    width: 55%;
     opacity: 0.7;
     color: $gray;
     font-size: 14px;
     font-weight: 400;
     line-height: 30px;
 
-    @media (max-width: 500px) {
+    @media (max-width: $S-res) {
       padding-top: 5%;
       width: 90%;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: $M-res) {
       width: 90%;
     }
   }
 
   .offer {
-    margin-top: 5%;
     display: grid;
-    grid-template-columns: 350px 350px 350px;
-    grid-template-rows: 315px 315px;
-    column-gap: 3%;
-    row-gap: 4%;
+    grid-template-columns: 300px;
+    grid-template-rows: 315px 315px 315px 315px 315px 315px;
     justify-items: center;
 
-    @media (max-width: 1200px) {
-      display: grid;
-      grid-template-columns: 300px;
-      grid-template-rows: 315px 315px 315px 315px 315px 315px;
+    @media (min-width: 600px) {
+      grid-template-columns: 300px 300px;
+      grid-template-rows: 315px 315px 315px;
+    }
+
+    @media (min-width: $XL-res) {
+      grid-template-columns: 350px 350px 350px;
+      grid-template-rows: 315px 315px;
+      column-gap: 3%;
       row-gap: .5%;
+      padding: 5% 0%;
     }
 
     &__container {
@@ -835,11 +840,18 @@ html {
 .opinion {
   display: flex;
   flex-direction: column;
-  background-image: url(../img/opinion-bg.jpg);
+  background-image: url(../img/opinion-bg-small.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  margin-top: 10%;
+
+  @media (min-width: $S-res) {
+    background-image: url(../img/opinion-bg-medium.jpg);
+  }
+
+  @media (min-width: $L-res) {
+    background-image: url(../img/opinion-bg-large.jpg);
+  }
 
   &__title {
     color: $white;
@@ -889,37 +901,23 @@ html {
       font-size: 14px;
       font-weight: 400;
       line-height: 30px;
-      width: 43%;
+      width: 90%;
       text-align: center;
 
-      @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-
-        to {
-          opacity: 0.7;
-        }
-      }
-
-      &--fadein {
-        animation: fadein 4s;
-      }
-
-      @media (max-width: 800px) {
-        width: 90%;
+      @media (min-width: $M-res) {
+        width: 43%;
       }
     }
 
     &__grade {
       display: flex;
       align-self: center;
-      width: 5%;
+      width: 20%;
       height: 2%;
       margin-top: 2%;
 
-      @media (max-width: 800px) {
-        width: 10%;
+      @media (min-width: $S-res) {
+        width: 8%;
       }
     }
 
@@ -982,48 +980,30 @@ html {
   }
 
   .container {
+    width: 90%;
     margin-top: 4%;
     display: flex;
+    flex-direction: column;
 
-    @media (min-width: 1200px) {
-      width: 1110px;
-    }
-
-    @media (max-width: 500px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &--left {
-      width: 32%;
-
-      @media (max-width: 500px) {
-        width: 80%;
-      }
-
-      img {
-        max-width: 100%;
-        height: 100%;
-      }
+    @media (min-width: $M-res) {
+      flex-direction: row;
+      max-width: 1100px;
     }
 
     &--right {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 68%;
+      margin-top: 2%;
+      align-self: center;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+      min-height: 315px;
 
-      @media (max-width: 500px) {
-        width: 80%;
+      @media (min-width: $M-res) {
+        margin-left: 3.5%;
+        margin-top: 0%;
       }
 
       span {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        width: 11%;
+        display: block;
         color: $red;
         font-size: 12px;
         font-weight: 700;
@@ -1031,91 +1011,110 @@ html {
       }
     }
 
-    &__date {
-      max-width: 23%;
-      margin-left: 5%;
+    &__image {
+      align-self: center;
+      max-width: 315px;
 
-      @media (max-width: 800px) {
-        min-width: 30%;
+      @media (min-width: $S-res) {
+        align-self: flex-start;
+      }
+
+      @media (min-width: $M-res) {
+        min-height: 325px;
+        max-width: 340px;
+        min-width: 340px;
       }
     }
 
-    &__author {
-      max-width: 5%;
-      margin-left: 20%;
+    &__info {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 150px;
+      height: 30px;
+      margin-left: 5%;
 
-      @media (max-width: 800px) {
-        margin-left: 25%;
-        min-width: 15%;
-      }
-
-      @media (max-width: 400px) {
-        margin-left: 35%;
-        min-width: 15%;
+      @media (min-width: $XL-res) {
+        margin-left: 2%;
       }
     }
 
     &__title {
-      margin-top: 5%;
+      margin-top: 10%;
       margin-left: 5%;
-      width: 80%;
       color: $gray;
       font-size: 14px;
       font-weight: 700;
       line-height: 30px;
       text-transform: uppercase;
 
-      @media (max-width: 800px) {
-        margin-top: 10%;
+      @media (min-width: $XL-res) {
+        margin-left: 2%;
+        margin-top: 8%;
       }
     }
 
     &__description {
-      margin: auto;
-      width: 90%;
       opacity: 0.7;
       color: $gray;
       font-size: 14px;
       font-weight: 400;
       line-height: 30px;
       margin-top: 1%;
+      margin-left: 5%;
+
+      @media (min-width: $XL-res) {
+        width: 90%;
+        margin-left: 2%;
+        margin-top: 3%;
+      }
     }
 
     &__link {
+      display: block;
       margin-left: 5%;
-      width: 11%;
       color: $gray;
       font-size: 14px;
       font-weight: 700;
       line-height: 30px;
       text-transform: uppercase;
-      margin-bottom: 3%;
 
-      @media (max-width: 800px) {
-        width: 40%;
+      @media (min-width: $XL-res) {
+        margin-left: 2%;
+        margin-top: 5%;
       }
     }
   }
 
   .posts {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 90%;
 
-    @media (min-width: 1200px) {
-      width: 1110px;
+    @media (min-width: $L-res) {
+      max-width: 1100px;
     }
 
     &__container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 259px;
-      column-gap: 3%;
+      display: flex;
+      flex-direction: column;
 
-      @media (max-width: 500px) {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        width: 80%;
+      @media (min-width: $L-res) {
+        max-width: 1100px;
+        width: 100%;
+      }
+
+      @media (min-width: $M-res) {
+        display: grid;
+
+        grid-template-columns: 345px 345px;
+        grid-template-rows: 259px;
+        column-gap: 3%;
+      }
+
+      @media (min-width: 1200px) {
+        grid-template-columns: 345px 345px 345px;
+        grid-template-rows: 259px;
       }
     }
 
@@ -1123,43 +1122,23 @@ html {
       position: relative;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
       margin-top: 10%;
+      max-width: 345px;
 
       span {
-        margin-top: 1%;
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        min-width: 32%;
+        display: block;
         color: $red;
         font-size: 12px;
         font-weight: 700;
         line-height: 30px;
       }
 
-      &__date {
-        max-width: 23%;
+      &__info {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        height: 30px;
         margin-left: 5%;
-
-        @media (max-width: 800px) {
-          min-width: 35%;
-        }
-
-        @media (max-width: 400px) {
-          min-width: 40%;
-        }
-      }
-
-      &__author {
-        max-width: 12%;
-        margin-left: 35%;
-
-        @media (max-width: 800px) {
-          margin-left: 45%;
-        }
-
-        @media (max-width: 400px) {
-          margin-left: 35%;
-        }
       }
 
       &__title {
@@ -1187,18 +1166,13 @@ html {
 
       &__link {
         display: block;
-        margin-top: 10%;
+        margin-top: 15%;
         margin-left: 5%;
-        width: 40%;
         color: $gray;
         font-size: 14px;
         font-weight: 700;
         line-height: 30px;
         text-transform: uppercase;
-
-        @media (max-width: 800px) {
-          min-width: 60%;
-        }
       }
     }
   }
@@ -1216,10 +1190,10 @@ html {
     display: flex;
     justify-content: center;
     margin-top: 5%;
-    width: 40%;
+    width: 100%;
 
-    @media (max-width: 800px) {
-      width: 100%;
+    @media (min-width: $M-res) {
+      width: 40%;
     }
 
     &--item {
