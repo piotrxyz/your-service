@@ -6,12 +6,12 @@ const heroSlides = [{
 {
     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris`
+    Ut enim ad minim veniam, quis nostrud exercitation`
 },
 {
     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris`
+    Ut enim ad minim veniam, quis nostrud`
 }]
 
 const subtitle = document.querySelector('.hero__subtitle');

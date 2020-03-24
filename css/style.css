@@ -335,7 +335,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -343,6 +342,13 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
+  padding-bottom: 30%;
+}
+
+@media (min-width: 500px) {
+  .hero {
+    padding-bottom: 10%;
+  }
 }
 
 .hero__title {
@@ -353,15 +359,9 @@ html {
   text-align: center;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .hero__title {
     font-size: 56px;
-  }
-}
-
-@media (min-width: 800px) {
-  .hero__title {
-    width: 70%;
   }
 }
 
@@ -370,7 +370,8 @@ html {
 }
 
 .hero__subtitle {
-  max-width: 60%;
+  max-width: 90%;
+  height: 150px;
   text-align: center;
   opacity: 0.7;
   color: #ffffff;
@@ -402,16 +403,16 @@ html {
           animation: fadein 4s;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1300px) {
   .hero__subtitle {
-    max-width: 70%;
+    min-width: 1100px;
+    max-width: 1100px;
   }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 500px) and (max-width: 1000px) {
   .hero__subtitle {
-    padding-top: 10%;
-    min-width: 80%;
+    height: 105px;
   }
 }
 
@@ -1255,21 +1256,20 @@ html {
 
 .blog__description {
   text-align: center;
-  width: 45%;
-  margin-top: 2%;
   opacity: 0.7;
   color: #2d3f51;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 90%;
+  font-size: 14px;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   .blog__description {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    width: 90%;
-    font-size: 14px;
+    width: 45%;
   }
 }
 
