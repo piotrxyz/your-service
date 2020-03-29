@@ -4,7 +4,8 @@
   "description": "Website for fictional company.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss --output css"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
     "url": "https://github.com/piotrxyz/your-service/issues"
   },
   "homepage": "https://github.com/piotrxyz/your-service#readme",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0"
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
   }
 }
