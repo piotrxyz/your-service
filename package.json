@@ -1,0 +1,29 @@
+{
+  "name": "your-service",
+  "version": "1.0.0",
+  "description": "Website for fictional company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piotrxyz/your-service.git"
+  },
+  "keywords": [
+    "fictional",
+    "company",
+    "PSD",
+    "to",
+    "HTML"
+  ],
+  "author": "Piotr K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piotrxyz/your-service/issues"
+  },
+  "homepage": "https://github.com/piotrxyz/your-service#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0"
+  }
+}
