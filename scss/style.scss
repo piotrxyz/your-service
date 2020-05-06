@@ -544,6 +544,7 @@ html {
       height: 34px;
       padding-left: 8px;
       padding-right: 8px;
+      border: 1px solid transparent;
 
       &:hover {
         border-radius: 3px;
@@ -985,7 +986,6 @@ html {
     }
 
     &--right {
-      position: relative;
       margin-top: 2%;
       align-self: center;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
@@ -994,6 +994,10 @@ html {
       @media (min-width: $M-res) {
         margin-left: 3.5%;
         margin-top: 0%;
+      }
+
+      @media (min-width: $XL-res) {
+        min-height: 325px;
       }
 
       span {
@@ -1007,7 +1011,7 @@ html {
 
     &__image {
       align-self: center;
-      max-width: 315px;
+      max-width: 100%;
 
       @media (min-width: $S-res) {
         align-self: flex-start;
@@ -1075,7 +1079,7 @@ html {
 
       @media (min-width: $XL-res) {
         margin-left: 2%;
-        margin-top: 5%;
+        margin-top: 4%;
       }
     }
   }
@@ -1160,7 +1164,7 @@ html {
 
       &__link {
         display: block;
-        margin-top: 15%;
+        margin-top: 12%;
         margin-left: 5%;
         color: $gray;
         font-size: 14px;
