@@ -395,7 +395,7 @@ html {
   }
 
   &--right {
-    padding: 5% 10%;
+    padding: 5% 0%;
 
     @media (min-width: $L-res) {
       padding-left: 10%;
@@ -431,7 +431,7 @@ html {
   flex-direction: column;
   box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
   min-width: 254px;
-  max-width: 254px;
+  max-width: 100%;
   margin: 5% auto;
 
   @media (min-width: $S-res) {
@@ -1030,16 +1030,16 @@ html {
       justify-content: space-between;
       width: 150px;
       height: 30px;
-      margin-left: 5%;
+      margin-left: 15px;
 
       @media (min-width: $XL-res) {
-        margin-left: 2%;
+        margin-left: 15px;
       }
     }
 
     &__title {
       margin-top: 10%;
-      margin-left: 5%;
+      margin-left: 15px;
       color: $gray;
       font-size: 14px;
       font-weight: 700;
@@ -1047,7 +1047,6 @@ html {
       text-transform: uppercase;
 
       @media (min-width: $XL-res) {
-        margin-left: 2%;
         margin-top: 8%;
       }
     }
@@ -1059,18 +1058,18 @@ html {
       font-weight: 400;
       line-height: 30px;
       margin-top: 1%;
-      margin-left: 5%;
+      margin-left: 15px;
 
       @media (min-width: $XL-res) {
         width: 90%;
-        margin-left: 2%;
         margin-top: 3%;
       }
     }
 
     &__link {
       display: block;
-      margin-left: 5%;
+      margin-left: 15px;
+      margin-top: 30px;
       color: $gray;
       font-size: 14px;
       font-weight: 700;
@@ -1078,7 +1077,6 @@ html {
       text-transform: uppercase;
 
       @media (min-width: $XL-res) {
-        margin-left: 2%;
         margin-top: 4%;
       }
     }
@@ -1120,7 +1118,7 @@ html {
       position: relative;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
       margin-top: 10%;
-      max-width: 345px;
+      max-width: 100%;
 
       span {
         display: block;

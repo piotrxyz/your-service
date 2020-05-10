@@ -286,7 +286,7 @@ html {
     flex-direction: row; } }
 
 .about--right {
-  padding: 5% 10%; }
+  padding: 5% 0%; }
   @media (min-width: 1000px) {
     .about--right {
       padding-left: 10%;
@@ -315,7 +315,7 @@ html {
   flex-direction: column;
   box-shadow: 0 0 40px rgba(17, 25, 36, 0.1);
   min-width: 254px;
-  max-width: 254px;
+  max-width: 100%;
   margin: 5% auto; }
   @media (min-width: 500px) {
     .article {
@@ -770,13 +770,13 @@ html {
       justify-content: space-between;
       width: 150px;
       height: 30px;
-      margin-left: 5%; }
+      margin-left: 15px; }
       @media (min-width: 1300px) {
         .blog .container__info {
-          margin-left: 2%; } }
+          margin-left: 15px; } }
     .blog .container__title {
       margin-top: 10%;
-      margin-left: 5%;
+      margin-left: 15px;
       color: #2d3f51;
       font-size: 14px;
       font-weight: 700;
@@ -784,7 +784,6 @@ html {
       text-transform: uppercase; }
       @media (min-width: 1300px) {
         .blog .container__title {
-          margin-left: 2%;
           margin-top: 8%; } }
     .blog .container__description {
       opacity: 0.7;
@@ -793,15 +792,15 @@ html {
       font-weight: 400;
       line-height: 30px;
       margin-top: 1%;
-      margin-left: 5%; }
+      margin-left: 15px; }
       @media (min-width: 1300px) {
         .blog .container__description {
           width: 90%;
-          margin-left: 2%;
           margin-top: 3%; } }
     .blog .container__link {
       display: block;
-      margin-left: 5%;
+      margin-left: 15px;
+      margin-top: 30px;
       color: #2d3f51;
       font-size: 14px;
       font-weight: 700;
@@ -809,7 +808,6 @@ html {
       text-transform: uppercase; }
       @media (min-width: 1300px) {
         .blog .container__link {
-          margin-left: 2%;
           margin-top: 4%; } }
   .blog .posts {
     display: flex;
@@ -839,7 +837,7 @@ html {
       position: relative;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
       margin-top: 10%;
-      max-width: 345px; }
+      max-width: 100%; }
       .blog .posts .post span {
         display: block;
         color: #c8342d;
