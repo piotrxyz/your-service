@@ -293,20 +293,6 @@ html {
     font-weight: 400;
     line-height: 30px;
 
-    @keyframes fadein {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 0.7;
-      }
-    }
-
-    &--fadein {
-      animation: fadein 4s;
-    }
-
     @media (min-width: $XL-res) {
       min-width: 1100px;
       max-width: 1100px;
@@ -396,6 +382,10 @@ html {
 
   &--right {
     padding: 5% 0%;
+
+    @media (min-width: $S-res) {
+      padding: 5% 5%;
+    }
 
     @media (min-width: $L-res) {
       padding-left: 10%;
@@ -619,8 +609,12 @@ html {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  padding-bottom: 2%;
+  padding-bottom: 10%;
   background-color: $gray;
+
+  @media (min-width: $M-res) {
+    padding-bottom: 2%;
+  }
 
   &__title {
     padding-top: 2%;
@@ -1075,10 +1069,6 @@ html {
       font-weight: 700;
       line-height: 30px;
       text-transform: uppercase;
-
-      @media (min-width: $XL-res) {
-        margin-top: 4%;
-      }
     }
   }
 
@@ -1134,12 +1124,12 @@ html {
         justify-content: space-between;
         width: 150px;
         height: 30px;
-        margin-left: 5%;
+        margin-left: 15px;
       }
 
       &__title {
         margin-top: 15%;
-        margin-left: 5%;
+        margin-left: 15px;
         width: 80%;
         color: $gray;
         font-size: 14px;
@@ -1150,7 +1140,7 @@ html {
 
       &__description {
         margin: auto;
-        margin-left: 5%;
+        margin-left: 15px;
         width: 95%;
         opacity: 0.7;
         color: $gray;
@@ -1163,7 +1153,7 @@ html {
       &__link {
         display: block;
         margin-top: 12%;
-        margin-left: 5%;
+        margin-left: 15px;
         color: $gray;
         font-size: 14px;
         font-weight: 700;

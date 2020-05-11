@@ -17,7 +17,7 @@ const heroSlides = [{
 const subtitle = document.querySelector('.hero__subtitle');
 const dots = [...document.querySelectorAll('.hero__slider span')]
 
-const time = 5000;
+const time = 3000;
 let slideActive = 0;
 
 const changeDot = () => {
@@ -32,7 +32,6 @@ const changeSlide = () => {
         slideActive = 0;
     }
     subtitle.textContent = heroSlides[slideActive].text;
-    subtitle.classList.toggle('hero__subtitle--fadein');
     changeDot()
 }
 setInterval(changeSlide, time);
