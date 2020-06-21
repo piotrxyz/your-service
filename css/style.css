@@ -237,6 +237,7 @@ html {
   display: flex;
   align-self: center;
   justify-content: center;
+  align-items: center;
   margin: 2% auto;
   width: 255px;
   min-height: 65px;
