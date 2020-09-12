@@ -26,18 +26,18 @@ const clientSlides = [{
     est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque`
 }]
 
-const clientName = document.querySelector('.client__name');
-const description = document.querySelector('.client__description');
-const image = document.querySelector('.client__image');
-const client_dots = [...document.querySelectorAll('.client__slider span')]
+const clientName = document.querySelector(".client__name");
+const description = document.querySelector(".client__description");
+const image = document.querySelector(".client__image");
+const client_dots = [...document.querySelectorAll(".client__slider span")]
 
 const client_time = 5000;
 let active = 0;
 
 const changeDots = () => {
-    const acvDot = client_dots.findIndex(dot => dot.classList.contains('active'));
-    client_dots[acvDot].classList.remove('active');
-    client_dots[active].classList.add('active');
+    const acvDot = client_dots.findIndex(dot => dot.classList.contains("active"));
+    client_dots[acvDot].classList.remove("active");
+    client_dots[active].classList.add("active");
 }
 
 const changeClientSlide = () => {

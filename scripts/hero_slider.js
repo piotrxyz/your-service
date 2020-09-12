@@ -14,16 +14,16 @@ const heroSlides = [{
     Ut enim ad minim veniam, quis nostrud`
 }]
 
-const subtitle = document.querySelector('.hero__subtitle');
-const dots = [...document.querySelectorAll('.hero__slider span')]
+const slide = document.querySelector(".hero__slide");
+const dots = [...document.querySelectorAll(".hero__slider span")]
 
 const time = 3000;
 let slideActive = 0;
 
 const changeDot = () => {
-    const activeDot = dots.findIndex(dot => dot.classList.contains('active'));
-    dots[activeDot].classList.remove('active');
-    dots[slideActive].classList.add('active');
+    const activeDot = dots.findIndex(dot => dot.classList.contains("active"));
+    dots[activeDot].classList.remove("active");
+    dots[slideActive].classList.add("active");
 }
 
 const changeSlide = () => {
@@ -31,9 +31,7 @@ const changeSlide = () => {
     if (slideActive === heroSlides.length) {
         slideActive = 0;
     }
-    subtitle.textContent = heroSlides[slideActive].text;
+    slide.textContent = heroSlides[slideActive].text;
     changeDot()
 }
 setInterval(changeSlide, time);
-
-

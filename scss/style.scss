@@ -26,6 +26,14 @@ html {
   overflow-x: hidden;
 }
 
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .wrapper {
   background-image: url(../img/hero-bg-large.jpg);
   background-repeat: no-repeat;
@@ -248,14 +256,6 @@ html {
   }
 }
 
-.main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -284,7 +284,7 @@ html {
     }
   }
 
-  &__subtitle {
+  &__slide {
     max-width: 90%;
     height: 150px;
     text-align: center;
@@ -350,13 +350,6 @@ html {
     margin-top: 0%;
   }
 
-  &-link {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    color: $white;
-  }
-
   &--red {
     color: $white;
     border-radius: 20px;
@@ -373,6 +366,8 @@ html {
 }
 
 .about {
+  margin: auto;
+
   @media (max-width: $S-res) {
     padding: 5% 5%;
   }
@@ -514,15 +509,12 @@ html {
 
   .products {
     &__list {
-      padding-top: 5%;
-      padding-bottom: 5%;
-      width: 100%;
+      padding: 5% 0;
       display: flex;
       justify-content: space-around;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      list-style: none;
 
       @media (min-width: $L-res) {
         font-size: 14px;
