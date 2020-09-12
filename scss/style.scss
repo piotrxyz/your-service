@@ -142,7 +142,7 @@ html {
   width: 100%;
   height: 100%;
   transform: translateX(100%);
-  transition: transform .2s linear;
+  transition: transform 0.2s linear;
   background-color: rgba(45, 60, 75, 0.931);
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@ html {
   border: none;
   width: 35px;
   height: 20px;
-  transition: .2s;
+  transition: 0.2s;
 
   @media (min-width: $XXL-res) {
     display: none;
@@ -217,7 +217,8 @@ html {
     border: 1px solid rgb(63, 61, 61);
     border-radius: 2px;
     left: 0;
-    transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
+    transition: top 0.2s 0.2s, bottom 0.2s 0.2s, opacity 0.2s 0.2s,
+      transform 0.2s 0.4s;
 
     &:nth-child(1) {
       top: 0;
@@ -314,7 +315,7 @@ html {
       display: inline-block;
       width: 15px;
       height: 15px;
-      opacity: .5;
+      opacity: 0.5;
       cursor: pointer;
       border-radius: 50%;
       background-color: $white;
@@ -339,6 +340,7 @@ html {
   border: 1px solid $white;
   background: transparent;
   color: $white;
+  font-size: 13px;
 
   @media (min-width: $XXL-res) {
     margin-top: 15%;
@@ -356,6 +358,7 @@ html {
   }
 
   &--red {
+    color: $white;
     border-radius: 20px;
     border-color: transparent;
     background-color: $red;
@@ -509,7 +512,6 @@ html {
     }
   }
 
-
   .products {
     &__list {
       padding-top: 5%;
@@ -588,7 +590,6 @@ html {
       padding-left: 20px;
       grid-column: 2;
       grid-row: 1;
-
     }
   }
 
@@ -767,7 +768,7 @@ html {
       grid-template-columns: 350px 350px 350px;
       grid-template-rows: 315px 315px;
       column-gap: 3%;
-      row-gap: .5%;
+      row-gap: 0.5%;
       padding: 5% 0%;
     }
 
@@ -790,7 +791,6 @@ html {
       margin-top: 15%;
       width: 98px;
       height: 98px;
-
     }
 
     &__icon {
@@ -921,7 +921,7 @@ html {
         display: inline-block;
         width: 15px;
         height: 15px;
-        opacity: .5;
+        opacity: 0.5;
         cursor: pointer;
         border-radius: 50%;
         background-color: $white;
@@ -961,8 +961,6 @@ html {
     padding-bottom: 2%;
     width: 90%;
     font-size: 14px;
-
-
 
     @media (min-width: $M-res) {
       width: 45%;
