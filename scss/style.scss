@@ -26,38 +26,16 @@ html {
   overflow-x: hidden;
 }
 
-.main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.wrapper {
-  background-image: url(../img/hero-bg-large.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-
-  @media (max-width: $M-res) {
-    background-image: url(../img/hero-bg-medium.jpg);
-
-    @media (max-width: $S-res) {
-      background-image: url(../img/hero-bg-small.jpg);
-    }
-  }
-}
-
 .header {
-  position: relative;
+  position: absolute;
   display: flex;
-  margin-top: 2%;
+  top: 8px;
   height: 50px;
   width: 90%;
+
+  @media (min-width: $M-res) {
+    top: 30px;
+  }
 
   &__logo {
     cursor: pointer;
@@ -145,15 +123,14 @@ html {
 
 .menu {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 999;
   right: 0;
-  width: 100%;
   height: 100%;
   transform: translateX(100%);
   transition: transform 0.2s linear;
   background-color: rgba(45, 60, 75, 0.931);
-  display: flex;
-  flex-direction: column;
 
   &__list {
     width: 100%;
@@ -208,6 +185,7 @@ html {
   width: 35px;
   height: 20px;
   transition: 0.2s;
+  outline: transparent;
 
   @media (min-width: $XXL-res) {
     display: none;
@@ -257,23 +235,26 @@ html {
 }
 
 .hero {
+  min-height: 100vh;
+  background-image: url(../img/hero-bg-large.jpg);
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding-bottom: 30%;
+  padding-bottom: 200px;
 
-  @media (min-width: $S-res) {
-    padding-bottom: 10%;
+  @media (min-width: $XL-res) {
+    background-size: 100%;
+    padding-bottom: 0;
   }
 
   &__title {
     color: $white;
     font-size: 20px;
-    font-weight: 700;
     text-transform: uppercase;
+    animation: fadein 3s;
     text-align: center;
+    margin-top: 80px;
 
     @media (min-width: $L-res) {
       font-size: 56px;
@@ -330,10 +311,8 @@ html {
 
 .button {
   display: flex;
-  align-self: center;
   justify-content: center;
   align-items: center;
-  margin: 2% auto;
   width: 255px;
   min-height: 65px;
   border-radius: 20px;
@@ -341,14 +320,6 @@ html {
   background: transparent;
   color: $white;
   font-size: 13px;
-
-  @media (min-width: $XXL-res) {
-    margin-top: 15%;
-  }
-
-  @media (max-width: $M-res) {
-    margin-top: 0%;
-  }
 
   &--red {
     color: $white;
@@ -893,13 +864,7 @@ html {
     &__grade {
       display: flex;
       align-self: center;
-      width: 20%;
-      height: 2%;
       margin-top: 2%;
-
-      @media (min-width: $S-res) {
-        width: 8%;
-      }
     }
 
     &__slider {
@@ -1223,6 +1188,162 @@ html {
     &--link {
       color: $white;
       text-align: center;
+    }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide {
+  opacity: 0;
+  z-index: 0;
+  position: relative;
+  transition: 2s all;
+  .title {
+    left: -2rem;
+    opacity: 0;
+  }
+}
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+  .title {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: $L-res) {
+    width: 1000px;
+  }
+
+  .element-title {
+    color: #fff;
+    font-family: sans-serif;
+    position: relative;
+    left: -3rem;
+    opacity: 0;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 0;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    left: -3rem;
+    opacity: 0;
+    transition: 2s left, 2s opacity;
+
+    @media (min-width: $L-res) {
+      font-size: 6rem;
+    }
+  }
+  .element-text {
+    color: $white;
+    position: relative;
+    left: -3rem;
+    opacity: 0;
+    font-size: 14px;
+    // font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    max-width: 90%;
+    left: -3rem;
+    opacity: 0;
+    transition: 2s 1s left, 1s 1s opacity;
+  }
+}
+.slider-slides-cnt {
+  height: 250px;
+  width: 100%;
+  position: relative;
+}
+.slider-slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: 0.4s all;
+
+  @media (min-width: $M-res) {
+    margin-top: 0;
+  }
+}
+.slider-slide-active {
+  z-index: 1;
+  opacity: 1;
+  .element-title {
+    left: 0;
+    opacity: 1;
+  }
+  .element-text {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.slider-dots {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.slider-dots-button {
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 0 3px;
+  border: 0;
+  text-indent: -999px;
+  cursor: pointer;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    transition: 0.5s all;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.slider-dots-element-active {
+  .slider-dots-button {
+    opacity: 1;
+    &:before {
+      background: #fff;
+      transform: translate(-50%, -50%) scale(1.2);
     }
   }
 }
