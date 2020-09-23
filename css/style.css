@@ -175,7 +175,8 @@ html {
     text-transform: uppercase;
     animation: fadein 3s;
     text-align: center;
-    padding-top: 135px; }
+    padding-top: 135px;
+    transition: all 1s; }
     @media (min-width: 1000px) {
       .hero__title {
         font-size: 56px;
@@ -959,7 +960,7 @@ html {
   background-color: #ffffff;
   margin: 0 3px;
   border: 0;
-  text-indent: -999px;
+  text-indent: -2000px;
   cursor: pointer;
   position: relative; }
   .slider-dots-button:before {
