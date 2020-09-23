@@ -32,6 +32,7 @@ html {
   top: 8px;
   height: 50px;
   width: 90%;
+  animation: fadein 3s;
 
   @media (min-width: $M-res) {
     top: 30px;
@@ -241,12 +242,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 200px;
-
-  @media (min-width: $XL-res) {
-    background-size: 100%;
-    padding-bottom: 0;
-  }
+  padding-bottom: 50px;
+  background-size: cover;
 
   &__title {
     color: $white;
@@ -254,57 +251,15 @@ html {
     text-transform: uppercase;
     animation: fadein 3s;
     text-align: center;
-    margin-top: 80px;
+    padding-top: 135px;
 
     @media (min-width: $L-res) {
       font-size: 56px;
+      padding-top: 200px;
     }
 
     span {
       color: $red;
-    }
-  }
-
-  &__slide {
-    max-width: 90%;
-    height: 150px;
-    text-align: center;
-    opacity: 0.7;
-    color: $white;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 30px;
-
-    @media (min-width: $XL-res) {
-      min-width: 1100px;
-      max-width: 1100px;
-    }
-
-    @media (min-width: $S-res) and (max-width: $L-res) {
-      height: 105px;
-    }
-  }
-
-  &__slider {
-    margin-top: 3%;
-    padding-bottom: 2%;
-    display: flex;
-    align-self: center;
-    color: $white;
-
-    span {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      opacity: 0.5;
-      cursor: pointer;
-      border-radius: 50%;
-      background-color: $white;
-      margin: 0 3px;
-
-      &.active {
-        opacity: 1;
-      }
     }
   }
 }
@@ -320,6 +275,8 @@ html {
   background: transparent;
   color: $white;
   font-size: 13px;
+  margin-top: 50px;
+  animation: fadein 3s;
 
   &--red {
     color: $white;
@@ -1222,10 +1179,8 @@ html {
 
 .slider {
   position: relative;
+  height: 200px;
   width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
   @media (min-width: $L-res) {
     width: 1000px;
@@ -1261,28 +1216,23 @@ html {
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
     max-width: 90%;
+    margin: auto;
     left: -3rem;
     opacity: 0;
     transition: 2s 1s left, 1s 1s opacity;
   }
 }
 .slider-slides-cnt {
-  height: 250px;
-  width: 100%;
-  position: relative;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .slider-slide {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   opacity: 0;
   z-index: 0;
-  opacity: 0;
   transition: 0.4s all;
 
   @media (min-width: $M-res) {
@@ -1304,8 +1254,6 @@ html {
 
 .slider-dots {
   z-index: 2;
-  position: absolute;
-  width: 100%;
   display: flex;
   justify-content: center;
   list-style: none;
@@ -1346,4 +1294,8 @@ html {
       transform: translate(-50%, -50%) scale(1.2);
     }
   }
+}
+
+#slider1 {
+  animation: fadein 3s;
 }

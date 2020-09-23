@@ -1,7 +1,7 @@
 class Slider {
     constructor(elemSelector, opts) {
         const defaultOpts = {
-            pauseTime: 0,
+            pauseTime: 6000,
             prevText: "Previous slide",
             nextText: "Next slide",
             generateDots: true
@@ -14,8 +14,6 @@ class Slider {
         this.elem = null;
         this.slides = null;
 
-        this.prev = null; //przycisk prev
-        this.next = null; //przycisk next
         this.dots = [];
 
         this.generateSlider();

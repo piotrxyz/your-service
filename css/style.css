@@ -15,7 +15,8 @@ html {
   display: flex;
   top: 8px;
   height: 50px;
-  width: 90%; }
+  width: 90%;
+  animation: fadein 3s; }
   @media (min-width: 800px) {
     .header {
       top: 30px; } }
@@ -166,56 +167,21 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 200px; }
-  @media (min-width: 1300px) {
-    .hero {
-      background-size: 100%;
-      padding-bottom: 0; } }
+  padding-bottom: 50px;
+  background-size: cover; }
   .hero__title {
     color: #ffffff;
     font-size: 20px;
     text-transform: uppercase;
     animation: fadein 3s;
     text-align: center;
-    margin-top: 80px; }
+    padding-top: 135px; }
     @media (min-width: 1000px) {
       .hero__title {
-        font-size: 56px; } }
+        font-size: 56px;
+        padding-top: 200px; } }
     .hero__title span {
       color: #c8342d; }
-  .hero__slide {
-    max-width: 90%;
-    height: 150px;
-    text-align: center;
-    opacity: 0.7;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 30px; }
-    @media (min-width: 1300px) {
-      .hero__slide {
-        min-width: 1100px;
-        max-width: 1100px; } }
-    @media (min-width: 500px) and (max-width: 1000px) {
-      .hero__slide {
-        height: 105px; } }
-  .hero__slider {
-    margin-top: 3%;
-    padding-bottom: 2%;
-    display: flex;
-    align-self: center;
-    color: #ffffff; }
-    .hero__slider span {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      opacity: 0.5;
-      cursor: pointer;
-      border-radius: 50%;
-      background-color: #ffffff;
-      margin: 0 3px; }
-      .hero__slider span.active {
-        opacity: 1; }
 
 .button {
   display: flex;
@@ -227,7 +193,9 @@ html {
   border: 1px solid #ffffff;
   background: transparent;
   color: #ffffff;
-  font-size: 13px; }
+  font-size: 13px;
+  margin-top: 50px;
+  animation: fadein 3s; }
   .button--red {
     color: #ffffff;
     border-radius: 20px;
@@ -914,10 +882,8 @@ html {
 
 .slider {
   position: relative;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  height: 200px;
+  width: 300px; }
   @media (min-width: 1000px) {
     .slider {
       width: 1000px; } }
@@ -948,27 +914,22 @@ html {
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
     max-width: 90%;
+    margin: auto;
     left: -3rem;
     opacity: 0;
     transition: 2s 1s left, 1s 1s opacity; }
 
 .slider-slides-cnt {
-  height: 250px;
-  width: 100%;
-  position: relative; }
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .slider-slide {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   opacity: 0;
   z-index: 0;
-  opacity: 0;
   transition: 0.4s all; }
   @media (min-width: 800px) {
     .slider-slide {
@@ -986,8 +947,6 @@ html {
 
 .slider-dots {
   z-index: 2;
-  position: absolute;
-  width: 100%;
   display: flex;
   justify-content: center;
   list-style: none; }
@@ -1023,3 +982,6 @@ html {
   .slider-dots-element-active .slider-dots-button:before {
     background: #fff;
     transform: translate(-50%, -50%) scale(1.2); }
+
+#slider1 {
+  animation: fadein 3s; }
