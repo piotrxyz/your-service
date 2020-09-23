@@ -918,7 +918,7 @@ html {
     margin: auto;
     left: -3rem;
     opacity: 0;
-    transition: 2s 1s left, 1s 1s opacity; }
+    transition: all 3s; }
 
 .slider-slides-cnt {
   height: 200px;
