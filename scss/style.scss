@@ -41,15 +41,24 @@ html {
   &__logo {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
+    top: 10px;
+    left: 0;
     color: $white;
     font-size: 21px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
+    font-weight: 600;
+    transition: all 1s;
+
+    span {
+      color: $red;
+    }
+
+    @media (min-width: $S-res) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+    }
   }
 }
 
@@ -179,12 +188,11 @@ html {
 .menu-button {
   position: fixed;
   z-index: 1000;
-  top: 20px;
   right: 20px;
   background-color: transparent;
   border: none;
   width: 35px;
-  height: 20px;
+  height: 21px;
   transition: 0.2s;
   outline: transparent;
 
@@ -242,7 +250,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  justify-content: center;
+  padding: 15% 0;
   background-size: cover;
 
   &__title {
@@ -251,12 +260,10 @@ html {
     text-transform: uppercase;
     animation: fadein 3s;
     text-align: center;
-    padding-top: 135px;
     transition: all 1s;
 
     @media (min-width: $L-res) {
       font-size: 56px;
-      padding-top: 200px;
     }
 
     span {
@@ -749,6 +756,9 @@ html {
 
 .opinion {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15% 0;
   flex-direction: column;
   background-image: url(../img/opinion-bg-small.jpg);
   background-repeat: no-repeat;
@@ -761,14 +771,12 @@ html {
 
   @media (min-width: $L-res) {
     background-image: url(../img/opinion-bg-large.jpg);
+    padding: 5% 0;
   }
 
   &__title {
     color: $white;
     font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin: 3%;
   }
 
   .client {

@@ -18,7 +18,6 @@ class Slider {
 
         this.generateSlider();
         this.changeSlide(this.currentSlide);
-        this.generateButton();
     }
 
     generateSlider() {
@@ -120,4 +119,5 @@ class Slider {
     }
 }
 
-const slide = new Slider("#slider1");
+const slide1 = new Slider("#slider1");
+const slide2 = new Slider("#slider2");

@@ -16,7 +16,7 @@
     <main id="main" class="main">
       <section id="hero" class="hero">
         <header id="header" class="header">
-          <h1 class="header__logo">logo</h1>
+          <h1 class="header__logo">Y<span>S</span></h1>
           <nav id="nav" class="nav">
             <ul id="socials" class="socials__list">
               <li class="socials__item">
@@ -47,7 +47,7 @@
             </ul>
             <ul id="nav__list" class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#wrapper">HOME</a>
+                <a class="nav__link" href="#hero">HOME</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="#about">PAGES</a>
@@ -65,16 +65,16 @@
                 <a class="nav__link" href="\\"><img src="img/lens.svg" alt="search" /></a>
               </li>
             </ul>
+            <button id="menu-button" class="menu-button" type="button" aria-label="menu button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </nav>
-        <button id="menu-button" class="menu-button" type="button" aria-label="menu button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
         <div id="menu" class="menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#wrapper">HOME</a>
+              <a class="menu__link" href="#hero">HOME</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#about">PAGES</a>
@@ -120,6 +120,7 @@
             </div>
         </article>
       </div>
+      
       <a class="button" href="#showcase">SEE OUR WORK</a>
       </section>
       <section id="about" class="about">
@@ -320,7 +321,34 @@
       </section>
       <section id="opinion" class="opinion">
         <h2 class="opinion__title">Clients About Us</h2>
-        <div class="client">
+
+
+        <div class="elements-list" id="slider2">
+          <article class="element">
+              <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              </div>
+          </article>
+          <article class="element">
+              <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation
+              </div>
+          </article>
+          <article class="element">
+            <div class="element-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Ut enim ad minim veniam, quis nostrud 
+            </div>
+        </article>
+      </div>
+
+
+        <!-- <div class="client">
           <img class="client__image" src="img/client-image.jpg" alt="client" loading="lazy">
           <span class="client__title">Client</span>
           <span class="client__name">John Doe</span>
@@ -339,7 +367,9 @@
           <span class="active"></span>
           <span></span>
           <span></span>
-        </div>
+        </div> -->
+
+        
       </section>
       <section id="blog" class="blog">
         <h2 class="blog__title">From Blog News</h2>
@@ -460,7 +490,7 @@
     </footer>
     <script src="./scripts/hamburger.js"></script>
     <script src="./scripts/slider.js"></script>
-    <script src="./scripts/client_slider.js"></script>
+    <!-- <script src="./scripts/client_slider.js"></script> -->
 </body>
 
 </html>

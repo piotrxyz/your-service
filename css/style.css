@@ -23,15 +23,21 @@ html {
   .header__logo {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
+    top: 10px;
+    left: 0;
     color: #ffffff;
     font-size: 21px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center; }
+    font-weight: 600;
+    transition: all 1s; }
+    .header__logo span {
+      color: #c8342d; }
+    @media (min-width: 500px) {
+      .header__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px; } }
 
 .nav {
   display: flex;
@@ -123,12 +129,11 @@ html {
 .menu-button {
   position: fixed;
   z-index: 1000;
-  top: 20px;
   right: 20px;
   background-color: transparent;
   border: none;
   width: 35px;
-  height: 20px;
+  height: 21px;
   transition: 0.2s;
   outline: transparent; }
   @media (min-width: 1600px) {
@@ -167,7 +172,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  justify-content: center;
+  padding: 15% 0;
   background-size: cover; }
   .hero__title {
     color: #ffffff;
@@ -175,12 +181,10 @@ html {
     text-transform: uppercase;
     animation: fadein 3s;
     text-align: center;
-    padding-top: 135px;
     transition: all 1s; }
     @media (min-width: 1000px) {
       .hero__title {
-        font-size: 56px;
-        padding-top: 200px; } }
+        font-size: 56px; } }
     .hero__title span {
       color: #c8342d; }
 
@@ -556,6 +560,9 @@ html {
 
 .opinion {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15% 0;
   flex-direction: column;
   background-image: url(../img/opinion-bg-small.jpg);
   background-repeat: no-repeat;
@@ -566,13 +573,11 @@ html {
       background-image: url(../img/opinion-bg-medium.jpg); } }
   @media (min-width: 1000px) {
     .opinion {
-      background-image: url(../img/opinion-bg-large.jpg); } }
+      background-image: url(../img/opinion-bg-large.jpg);
+      padding: 5% 0; } }
   .opinion__title {
     color: #ffffff;
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin: 3%; }
+    font-size: 36px; }
   .opinion .client {
     display: flex;
     flex-direction: column;
