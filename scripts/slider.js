@@ -119,5 +119,5 @@ class Slider {
     }
 }
 
-const slide1 = new Slider("#slider1");
-const slide2 = new Slider("#slider2");
+const slide1 = new Slider(".slider1");
+const slide2 = new Slider(".slider2");

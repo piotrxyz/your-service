@@ -103,26 +103,27 @@ html {
     justify-content: center;
     align-items: center;
     list-style: none; }
+  .menu__item {
+    padding: 10px 0px 10px 0px; }
   .menu__link {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #ffffff; }
   .menu__contact {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100px;
+    min-width: 120px;
     height: 100px; }
     .menu__contact--phone {
       background-image: url(../img/phone.svg);
       background-repeat: no-repeat;
-      width: 30px;
-      height: 30px; }
+      width: 40px;
+      height: 40px; }
     .menu__contact--mail {
       background-image: url(../img/mail.svg);
       background-repeat: no-repeat;
-      width: 30px;
-      height: 30px; }
+      width: 40px;
+      height: 40px; }
   .menu--show {
     transform: translateX(0); }
 
@@ -200,7 +201,8 @@ html {
   color: #ffffff;
   font-size: 13px;
   margin-top: 50px;
-  animation: fadein 3s; }
+  animation: fadein 3s;
+  transition: all 1s; }
   .button--red {
     color: #ffffff;
     border-radius: 20px;
@@ -220,7 +222,7 @@ html {
       padding: 5% 5%; } }
   @media (min-width: 1000px) {
     .about {
-      padding-bottom: 5%;
+      padding: 5% 0 5% 0;
       max-width: 1100px;
       display: flex;
       flex-direction: row; } }
@@ -864,11 +866,17 @@ html {
       color: #ffffff;
       text-align: center; }
 
+.hidden {
+  opacity: 0; }
+
 @keyframes fadein {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+.fade_in {
+  animation: fadein 2s; }
 
 .slide {
   opacity: 0;
@@ -989,5 +997,23 @@ html {
     background: #fff;
     transform: translate(-50%, -50%) scale(1.2); }
 
-#slider1 {
+.slider1 {
   animation: fadein 3s; }
+
+.slider2.slider {
+  background: transparent; }
+
+.slider2.slider .slider-slide:nth-child(1) {
+  background: black;
+  background-size: cover;
+  background-position: center center; }
+
+.slider2.slider .slider-slide:nth-child(2) {
+  background: white;
+  background-size: cover;
+  background-position: center center; }
+
+.slider2.slider .slider-slide:nth-child(3) {
+  background: red;
+  background-size: cover;
+  background-position: center center; }
